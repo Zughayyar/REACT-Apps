@@ -1,6 +1,6 @@
 .person-card {
-    width: 100%;
-    height: 2vh;
+    width: 95%;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,4 +8,11 @@
     text-align: center;
     border-radius: 10px;
     border: 1px solid black;
+    margin: 3%;
+    background-color: lightgray;
+}
+
+.person-card h1 p {
+    margin: 0;
+    padding: 0;
 }
