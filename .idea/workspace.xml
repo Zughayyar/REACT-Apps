@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db508137-7866-4617-8e77-f40a50149d6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Putting it Together/src/components/PersonCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/Putting it Together/src/components/PersonCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Putting it Together/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Putting it Together/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prop_it_up/src/components/PersonCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/prop_it_up/src/components/PersonCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +77,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/putting_it_together/src" />
+      <recent name="$PROJECT_DIR$/putting_it_together/src/components" />
       <recent name="$PROJECT_DIR$/prop_it_up/src/components" />
     </key>
   </component>
@@ -107,7 +105,7 @@
       <workItem from="1737284391127" duration="1366000" />
       <workItem from="1737286048957" duration="2384000" />
       <workItem from="1737290054125" duration="1873000" />
-      <workItem from="1737312978900" duration="575000" />
+      <workItem from="1737312978900" duration="2260000" />
     </task>
     <servers />
   </component>
