@@ -1,0 +1,50 @@
+.appStyle {
+    width: 95vw;
+    height: auto;
+    background-color: #dddddd;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+.headerStyle {
+    background-color: #6aa84f;
+    width: auto;
+    height: 15vh;
+    margin-bottom: 15px;
+}
+
+.navigationStyle {
+    background-color: #6fa8dc;
+    width: 25vw;
+    height: 50vh;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.mainStyle {
+    background-color: #e06666;
+    width: calc(95vw - 25vw - 45px);
+    height: 60vh;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+}
+
+.subContentStyle {
+    background-color: #ffd966;
+    width: calc(33.3333% - 15px);
+    height: 40vh;
+    display: inline-block;
+    margin: calc((15px/2));
+    vertical-align: top;
+}
+
+.advertiseStyle {
+    background-color: #b4a7d6;
+    width: calc(95vw - 25vw - 80px - (15px/2));
+    height: 13vh;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: calc((15px/2));
+}
