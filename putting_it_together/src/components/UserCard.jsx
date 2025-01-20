@@ -6,6 +6,7 @@ const UserCard = props => {
     const [ageState, setAgeState] = useState(age)
     const ageHandler = () => {
         setAgeState(ageState + 1)
+        console.log(ageState+1)
         console.log(ageState)
     }
     return (
