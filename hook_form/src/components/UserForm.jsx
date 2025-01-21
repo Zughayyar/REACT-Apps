@@ -9,6 +9,75 @@ const UserForm = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    // Validations
+    const [firstNameError, setFirstNameError] = useState("");
+    const [lastNameError, setLastNameError] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const [confirmPasswordError, setConfirmPasswordError] = useState("");
+
+    const handleFirstName = (e) => {
+        setFirstName(e.target.value);
+        if (e.target.value.length < 1) {
+            setFirstNameError("First Name is required");
+        }
+        else if (e.target.value.length < 2 ) {
+            setFirstNameError("First Name must be at least 2 characters long");
+        }
+        else {
+            setFirstNameError("");
+        }
+    }
+
+    const handleLastName = (e) => {
+        setLastName(e.target.value);
+        if (e.target.value.length < 1) {
+            setLastNameError("Last Name is required");
+        }
+        else if (e.target.value.length < 2 ) {
+            setLastNameError("Last Name must be at least 2 characters long");
+        }
+        else {
+            setLastNameError("");
+        }
+    }
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+        if (e.target.value.length < 1) {
+            setEmailError("Email is required");
+        }
+        else if (e.target.value.length < 2 ) {
+            setEmailError("Email must be at least 2 characters long");
+        }
+        else {
+            setEmailError("");
+        }
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+        if (e.target.value.length < 1) {
+            setPasswordError("Password is required");
+        }
+        else if (e.target.value.length < 8 ) {
+            setPasswordError("Password must be at least 8 characters long");
+        }
+        else {
+            setPasswordError("");
+        }
+    }
+
+    const handleConfirmPassword = (e) => {
+        const value = e.target.value;
+        setConfirmPassword(value);
+        if (password !== value) {
+            setConfirmPasswordError("Password must match");
+        } else {
+            setConfirmPasswordError("");
+        }
+    };
+
     const createUser = (e) => {
         e.preventDefault();
         const newUser = {
@@ -29,23 +98,28 @@ const UserForm = () => {
             <Form onSubmit={createUser}>
                 <Form.Group className="mb-3" controlId="formFirstName">
                     <Form.Label>First Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter First Name" onChange={e => setFirstName(e.target.value)} value={firstName} />
+                    <Form.Control type="text" placeholder="Enter First Name" onChange={handleFirstName} value={firstName} />
+                    {firstNameError ? <p>{firstNameError}</p> : ''}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formLastName">
                     <Form.Label>Last Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Last Name" onChange={e => setLastName(e.target.value)} value={lastName} />
+                    <Form.Control type="text" placeholder="Enter Last Name" onChange={handleLastName} value={lastName} />
+                    {lastNameError ? <p>{lastNameError}</p> : ''}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email Address" onChange={e => setEmail(e.target.value)} value={email} />
+                    <Form.Control type="text" placeholder="Enter Email Address" onChange={handleEmail} value={email} />
+                    {emailError ? <p>{emailError}</p> : ''}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)} value={password} />
+                    <Form.Control type="password" placeholder="Enter Password" onChange={handlePassword} value={password} />
+                    {passwordError ? <p>{passwordError}</p> : ''}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formConfirmPassword">
                     <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter Confirm Password" onChange={e => setConfirmPassword(e.target.value)} value={confirmPassword} />
+                    <Form.Control type="password" placeholder="Enter Confirm Password" onChange={handleConfirmPassword} value={confirmPassword} />
+                    {confirmPasswordError ? <p>{confirmPasswordError}</p> : ''}
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit
