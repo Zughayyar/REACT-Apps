@@ -8,7 +8,6 @@ const PersonCard = (props) => {
             <h2>{lastName}, {firstName}</h2>
             <p>Age: {age}</p>
             <p>Hair Color: {hairColor}</p>
-            <button>Birthday Button {firstName} {lastName}</button>
         </div>
     )
 }
