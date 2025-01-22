@@ -1,0 +1,17 @@
+.tabContainer {
+    display: flex;
+    border-bottom: 1px solid #ccc ;
+    margin-bottom: 10px;
+}
+
+.btnStyle {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.displayStyle {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}

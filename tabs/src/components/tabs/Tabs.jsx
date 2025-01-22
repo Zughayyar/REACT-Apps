@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './Tabs.module.css'
 
 const Tabs = (props) => {
     const [displayText, setDisplayText] = React.useState('')
@@ -9,7 +10,7 @@ const Tabs = (props) => {
     return (
         <div>
             <h1>My Tabs</h1>
-            <div style={{ display: "flex", borderBottom: "1px solid #ccc", marginBottom: "10px" }}>
+            <div className={styles.tabContainer}>
                 {
                     props.tabs.map((tab, i) => (
                         <button onClick={() => handleTabClick(tab.tabText)}
@@ -27,7 +28,7 @@ const Tabs = (props) => {
                     ))
                 }
             </div>
-            <div style={{ padding: "20px", border: "1px solid #ccc", marginTop: "10px" }}>
+            <div className={styles.displayStyle}>
                 {displayText}
             </div>
         </div>
