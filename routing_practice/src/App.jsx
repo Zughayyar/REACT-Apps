@@ -9,7 +9,6 @@ const App = () => {
             <Routes>
                 <Route path="/home" element={<Home/>} />
                 <Route path="/:word" element={<Word/>} />
-                <Route path="/:number" element={<Number/>} />
                 <Route path="/:word/:color/:backgroundColor" element={<ColorWord />} />
             </Routes>
         </div>
