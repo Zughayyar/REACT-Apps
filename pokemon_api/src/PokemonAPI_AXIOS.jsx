@@ -26,6 +26,7 @@ const PokemonAPI_AXIOS = () => {
             <ul>
                 {
                     pokemonList.map((pokemon) => (
+                        // eslint-disable-next-line react/jsx-key
                         <li>{pokemon}</li>
                     ))
                 }
