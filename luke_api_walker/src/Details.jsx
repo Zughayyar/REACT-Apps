@@ -21,8 +21,15 @@ const Details = () => {
     })
     return (
         <div>
-            <h1>The name of the {resource}: </h1>
-            <h2>{data.name}</h2>
+            <h1>Details about {resource}:</h1>
+            {data.name && <h2>{data.name}</h2>}
+            <ul>
+                {Object.entries(data).map(([key, value]) => (
+                    <li key={key}>
+                        <strong>{key}:</strong> {typeof value === "object" ? JSON.stringify(value) : value}
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
